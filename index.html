@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="css/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+
+		function getUniqueId(){
+			var date = new Date();
+			var components = [
+			    date.getYear(),
+			    date.getMonth(),
+			    date.getDate(),
+			    date.getHours(),
+			    date.getMinutes(),
+			    date.getSeconds(),
+			    date.getMilliseconds()
+			];
+
+			return components.join("");
+		}
+
+		$("#createRoom").click(function(){
+			window.location.href = "/chat/" + getUniqueId();
+		});
+
+	});
+
+</script>
+
+<meta charset=utf-8 />
+<title>Clean Chat</title>
+
+</head>
+<body>
+
+	<!--div id="loading">
+		<div>
+			<i class="fa fa-circle-o-notch fa-5x fa-spin"></i>
+			<br/><br/>
+			<p>Loading...<p>
+		</div>
+	</div-->
+
+	<div id="page" class="container">
+	  <div class="jumbotron">
+	    <h1>Clean Chat</h1>
+	    <p>Simple, fast and open source chat!</p>
+	    <button id="createRoom" type="button" class="btn btn-primary btn-lg outline">Create room</button>
+	  </div>
+	  <div class="row">
+	    <div class="col-sm-4">
+	    	<i class="fa fa-rocket fa-5x"></i>
+	      <h3>Fast</h3>
+	      <p>Choose a username, create or enter in chat room, share chat link with friends and start talking in just a second!</p>
+	    </div>
+	    <div class="col-sm-4">
+	    	<i class="fa fa-lock fa-5x"></i>
+	      <h3>Privacy friendly</h3>
+	      <p>Chats are private, no information or message history is retained on our server.</p>
+	    </div>
+	    <div class="col-sm-4">
+	    	<i class="fa fa-github fa-5x"></i>
+	      <h3>Open Source</h3> 
+	      <p>Fork me on GitHub. Click <a href="https://github.com/mbasso/cleanChat" target="_blank">here!</a></p>
+	    </div>
+	  </div>
+	</div>
+
+</body>
+</html>

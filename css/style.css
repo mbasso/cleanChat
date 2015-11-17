@@ -1,0 +1,76 @@
+hr {
+    margin: 5px 0 !important;
+}
+
+.jumbotron {
+  background-color: #2196F3 !important;
+}
+
+.jumbotron h1, .jumbotron p{
+	color: white !important;
+}
+
+#loading{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    color: #2196F3;
+    text-align: center;
+}
+
+#loading div{
+    position: absolute;
+    top: 45%;
+    left: 45%;
+    padding-left: 36px;
+    padding-top: -36px;
+}
+
+.scroll{
+    overflow: scroll;
+}
+
+/* Override bootstrap style */
+.media {
+    margin-top: 0 !important;
+}
+
+/* Button outline */
+
+.btn.outline {
+    background: none;
+    padding: 12px 22px;
+    text-shadow: none;
+}
+
+.btn-primary.outline {
+    border: 2px solid white;
+    color: white;
+}
+
+.btn-primary.outline:hover, .btn-primary.outline:focus, .btn-primary.outline:active, .btn-primary.outline.active, .open > .dropdown-toggle.btn-primary {
+    color: #2196F3;
+    border-color: white;
+    background: white;
+}
+
+.btn-primary.outline:active, .btn-primary.outline.active {
+    border-color: white;
+    color: transparent;
+    box-shadow: none;
+}
+
+/*.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}*/
