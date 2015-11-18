@@ -23,7 +23,7 @@
 
 
   <div class="container">
-    <div class="row " style="padding-top:20px;">
+    <div class="row">
         <div class="col-md-8">
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -33,12 +33,14 @@
                     <ul id="messageBox" class="media-list"></ul>
                 </div>
                 <div class="panel-footer">
-                    <div class="input-group">
-                        <input id="message" type="text" class="form-control" placeholder="Enter Message" />
+                    <form id="messageForm">
+                        <div class="input-group">
+                            <input id="message" type="text" class="form-control" placeholder="Enter Message" required/>
                             <span class="input-group-btn">
-                                <button id="sendMessage" class="btn btn-info" type="button"><i class="fa fa-paper-plane"></i> Send</button>
+                                <button class="btn btn-info" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
                             </span>
-                    </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -62,14 +64,16 @@
                 <div class="modal-header">
                     <h4 class="modal-title" id="loginModalLabel">Join chat</h4>
                 </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <input id="loginUsername" type="text" class="form-control" id="username" placeholder="Username">
+                <form id="loginForm">
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input id="loginUsername" type="text" class="form-control" id="username" placeholder="Username" required>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" id="loginSubmit" class="btn btn-primary">Submit</button>
-                </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

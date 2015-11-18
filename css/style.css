@@ -2,6 +2,14 @@ hr {
     margin: 5px 0 !important;
 }
 
+form{
+    margin: 0;
+}
+
+ul {
+    margin-bottom: 0 !important;
+}
+
 .jumbotron {
   background-color: #2196F3 !important;
 }
@@ -30,13 +38,42 @@ hr {
     padding-top: -36px;
 }
 
-.scroll{
-    overflow: scroll;
+.message{
+    padding-left: 1em;
+}
+
+.no-margin{
+    margin: 0 !important;
 }
 
 /* Override bootstrap style */
 .media {
     margin-top: 0 !important;
+}
+
+.row, .col-md-8, .panel-info{
+    height: 100% !important;
+}
+
+.col-md-8, .col-md-4{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.panel{
+    position: relative;
+}
+
+#messageBox{
+    position:absolute;
+    bottom:55;
+    top:41;
+    overflow-y: scroll;
+}
+
+.panel-footer{
+    position:absolute;
+    bottom:0;
 }
 
 /* Button outline */
