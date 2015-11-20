@@ -46,12 +46,32 @@ ul {
     margin: 0 !important;
 }
 
+#messageBox{
+    position:absolute;
+    bottom:55;
+    top:41;
+}
+
+#usersList{
+    position:absolute;
+    bottom:0;
+    top:41;
+}
+
+#share{
+    cursor: pointer;
+}
+
+.scrollable{
+    overflow-y: scroll;
+}
+
 /* Override bootstrap style */
 .media {
     margin-top: 0 !important;
 }
 
-.row, .col-md-8, .panel-info{
+.row, .col-md-8, .col-md-4, .panel-info, .panel-primary{
     height: 100% !important;
 }
 
@@ -62,13 +82,6 @@ ul {
 
 .panel{
     position: relative;
-}
-
-#messageBox{
-    position:absolute;
-    bottom:55;
-    top:41;
-    overflow-y: scroll;
 }
 
 .panel-footer{

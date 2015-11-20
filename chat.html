@@ -1,6 +1,8 @@
 ﻿<html>
 <head>
 
+    <link rel="icon" type="image/jpg" href="favicon.jpg">
+
     <link href="/css/style.css" rel="stylesheet">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
@@ -28,14 +30,17 @@
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <i class="fa fa-commenting"></i> Chat
+                    <div class="btn-group pull-right">
+                        <i id="share" class="fa fa-share-alt"> Invite</i>
+                    </div>
                 </div>
                 <div class="panel-body">
-                    <ul id="messageBox" class="media-list"></ul>
+                    <ul id="messageBox" class="media-list scrollable"></ul>
                 </div>
                 <div class="panel-footer">
                     <form id="messageForm">
                         <div class="input-group">
-                            <input id="message" type="text" class="form-control" placeholder="Enter Message" required/>
+                            <input id="message" type="text" autocomplete="off" class="form-control" placeholder="Enter Message" required/>
                             <span class="input-group-btn">
                                 <button class="btn btn-info" type="submit"><i class="fa fa-paper-plane"></i> Send</button>
                             </span>
@@ -52,7 +57,7 @@
                    <i class="fa fa-users"></i> Users
                 </div>
                 <div class="panel-body">
-                    <ul id="usersList" class="media-list"></ul>
+                    <ul id="usersList" class="media-list scrollable"></ul>
                 </div>
             </div>
         </div>
@@ -72,6 +77,27 @@
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="inviteModal" tabindex="-1" role="dialog" aria-labelledby="inviteModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="inviteModalLabel">Invite friends</h4>
+                </div>
+                <form id="loginForm">
+                    <div class="modal-body">
+                        <p>
+                            Copy this link and send it to your friends:<br/><br/>
+                            <script type="text/javascript">document.write(window.location.href);</script>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </form>
             </div>

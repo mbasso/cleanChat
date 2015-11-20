@@ -55,7 +55,7 @@ $(document).ready(function(){
 		var href = window.location.href;
 		var roomId = href.substr(href.lastIndexOf('/') + 1);
 
-		server.cleanChatServer.login( $('#loginUsername').val(), roomId );
+		server.cleanChatServer.login( $('<div/>').text( $('#loginUsername').val() ).html(), roomId );
 
     	e.preventDefault();
 	});
@@ -64,10 +64,14 @@ $(document).ready(function(){
 		if (!server)
 			return;
 		
-		server.cleanChatServer.send( $('#message').val() );
+		server.cleanChatServer.send( $('<div/>').text( $('#message').val() ).html() );
 		$('#message').val("");
 		
     	e.preventDefault();
+	});
+
+	$('#share').click(function() {
+		$('#inviteModal').modal('toggle');
 	});
 
 	var addUser = function(nick, color){
