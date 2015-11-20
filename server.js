@@ -43,7 +43,7 @@ cleanChatServer.login = function (nick, roomId) {
 	var id = this.connection.id;
 	if (nick)
 	{
-		connections[id].nick = nick;
+		connections[id].nick = escapeHtml(nick);
 		connections[id].room = roomId;
 		connections[id].color = Colors.random();
 		connections[id].client.cleanChat.welcome();
@@ -54,6 +54,7 @@ cleanChatServer.login = function (nick, roomId) {
 
 cleanChatServer.send = function (message) {
 	var sender = connections[this.connection.id];
+    message = escapeHtml(message);
 	for (var c in connections)
 	{
 		if (sender.room == connections[c].room)
@@ -171,3 +172,18 @@ Colors.random = function() {
            result = prop;
     return result;
 };
+
+var entityMap = {
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': '&quot;',
+    "'": '&#39;',
+    "/": '&#x2F;'
+  };
+
+function escapeHtml(string) {
+    return String(string).replace(/[&<>"'\/]/g, function (s) {
+        return entityMap[s];
+    });
+}
