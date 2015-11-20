@@ -1,6 +1,17 @@
 # Clean Chat
 
-##This project is incomplete. We are working on that
+![alt tag](https://github.com/mbasso/cleanChat/blob/master/screenshot.jpg)
+
+Clean chat is a simple free chat. Choose a username, create or enter in a chat room, share chat link with friends and start talking in just a second!
+
+Clean chat is design with:
+- [Node.js](https://nodejs.org)
+- [Eureca.io](http://eureca.io/)
+- [Engine.io](https://github.com/socketio/engine.io)
+- [Express](http://expressjs.com/)
+- [jQuery](https://jquery.com/)
+- [Bootstrap](http://getbootstrap.com/)
+- [Font Awesome](https://fortawesome.github.io/Font-Awesome/)
 
 ##Author
 **Matteo Basso**
