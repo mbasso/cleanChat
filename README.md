@@ -2,6 +2,8 @@
 
 ![alt tag](https://github.com/mbasso/cleanChat/blob/master/screenshot.jpg)
 
+####>>>>>[Try it here!](http://cleanchat.teamturkeys.com/)<<<<<
+
 Clean chat is a simple free chat. Choose a username, create or enter in a chat room, share chat link with friends and start talking in just a second!
 
 Clean chat is design with:
