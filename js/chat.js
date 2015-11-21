@@ -39,13 +39,13 @@ $(document).ready(function(){
 	cleanChat.removeUser = function(nick, time, color)
 	{
 		$('[data-username="'+nick+'"]').remove();
-		addMessage(nick, color, time, true);
+		addMessage(nick, color, time, 'out', true);
 	}
 
 	cleanChat.addUser = function(nick, time, color)
 	{
 		addUser(nick, color);
-		addMessage(nick, color, time);
+		addMessage(nick, color, time, 'in');
 	}
 
 	$('#loginForm').submit(function(e) {
@@ -78,13 +78,13 @@ $(document).ready(function(){
 		$('#usersList').append($('<li data-username="'+nick+'" class="media"><div class="media-body"><div class="media"><div class="media-body"><h5 style="color: '+color+'"><i class="fa fa-user"></i> '+nick+'</h5></div></div></div><hr/></li>'));
 	}
 
-	var addMessage = function(nick, color, time, isRemove){
+	var addMessage = function(nick, color, time, icon, isRemove){
 		var type;
 		if(isRemove)
 			type = "left";
 		else
 			type = "join";
-		$('#messageBox').append($('<li class="media"><div class="media-body"><div class="media"><div class="media-body"><i class="fa fa-sign-in"></i><b style="color: '+color+'"> '+nick+'</b> '+type+' the chat<br /><small class="text-muted">'+time+'</small><hr/></div></div></div></li>'));
+		$('#messageBox').append($('<li class="media"><div class="media-body"><div class="media"><div class="media-body"><i class="fa fa-sign-'+icon+'"></i><b style="color: '+color+'"> '+nick+'</b> '+type+' the chat<br /><small class="text-muted">'+time+'</small><hr/></div></div></div></li>'));
 	}
 
 	var isWindowVisible = (function(){
